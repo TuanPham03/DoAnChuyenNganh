@@ -1,0 +1,55 @@
+.h-text {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .booking-container {
+        background-size: cover;
+        background-position: center;
+
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .booking-form {
+        width: 1200px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-sidebar {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        background-color: #f3f4f6;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .contact-icon img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .contact-icon:hover {
+        transform: scale(1.1);
+        background-color: #e0e7ff;
+    }
