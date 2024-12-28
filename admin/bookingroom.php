@@ -9,15 +9,16 @@
                 <?php foreach($bkroom as $br){?>
                 <div class="modal-body">
                     <div data-mdb-input-init class="form-outline">
-                        <input class="form-control" type="text" name="id_inp" value="<?php echo $br['id']; ?>">
+                        <input class="form-control" type="hidden" name="id_inp" value="<?php echo $br['id']; ?>">
                     </div>
                     <div data-mdb-input-init class="form-outline">
-                        <input class="form-control" type="text" name="idroom_inp" value="<?php echo $br['room_id']; ?>">
+                        <input class="form-control" type="hidden" name="idroom_inp"
+                            value="<?php echo $br['room_id']; ?>">
                     </div>
                     <div data-mdb-input-init class="form-outline">
                         <label class="form-label" for="oldroom_inp">Phòng cũ</label>
                         <input class="form-control" type="text" name="oldroom_inp"
-                            value="<?php echo $br['room_number']; ?>">
+                            value="<?php echo $br['room_number']; ?>" readonly>
                     </div>
                     <div class="form-outline">
                         <label class="form-label" for="newroom">Phòng mới</label>
@@ -35,11 +36,12 @@
                     </div>
                     <div data-mdb-input-init class="form-outline">
                         <label class="form-label" for="checkin_inp">Ngày nhận phòng</label>
-                        <input class="form-control" type="date" name="checkin_inp" value="<?= date('Y-m-d') ?>">
+                        <input class="form-control" type="date" name="checkin_inp" value="<?= date('Y-m-d') ?>"
+                            readonly>
                     </div>
                     <div data-mdb-input-init class="form-outline">
                         <label class="form-label" for="checkout_inp">Ngày trả phòng</label>
-                        <input class="form-control" type="date" name="checkout_inp"
+                        <input class="form-control" type="date" name="checkout_inp" readonly
                             value="<?= isset($br['check_out_date']) ? (new DateTime($br['check_out_date']))->format('Y-m-d') : ''; ?>">
                     </div>
                     <div class="mb-3 mt-3">

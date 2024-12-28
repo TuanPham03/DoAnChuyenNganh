@@ -80,7 +80,9 @@
                         if ($row['new_room_id']==$r['id']) {
                     ?>
                 <div class="alert alert-danger mb-0" role="alert" style="text-align: center;">
-                    Đã thay đổi thành phòng <?= $r['room_number'] ?> - <?= $r['type_name'] ?>
+                    Đã thay đổi thành: Phòng <?= $r['room_number'] ?> - <?= $r['type_name'] ?>
+                    <p class="mb-0">Ngày đổi:
+                        <?= (new DateTime($row['change_date']))->format('d-m-Y') ?></p>
                 </div>
                 <?php }}}?>
                 <div class="card-body bg-light">

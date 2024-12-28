@@ -98,7 +98,7 @@
     
     function getDetailBooking($id){
         $conn=connectdb();
-        $sql="SELECT rc.id as rcid,rc.new_room_id,br.*,r.id as id_room,r.room_number,r.status,rt.type_name,bg.guest_name,bg.guest_phone,bg.guest_email,bg.guest_id_number
+        $sql="SELECT rc.id as rcid,rc.new_room_id,rc.change_date,br.*,r.id as id_room,r.room_number,r.status,rt.type_name,bg.guest_name,bg.guest_phone,bg.guest_email,bg.guest_id_number
         FROM booking_rooms br 
         left join rooms r on br.room_id=r.id
         left join room_types rt on r.room_type_id=rt.id
