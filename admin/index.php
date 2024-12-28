@@ -508,7 +508,7 @@ include "dashboard.php";
                                 $data=getDetailBooking($id);
                                 $bookingid=getBookingById($id);
                                 $user=getUserByBookingRoom($id);
-                                
+                                $room=getAllRooms();
                         }
                         if(isset($_GET['idbook'])){
                                 $idroom=$_GET['idbook'];
