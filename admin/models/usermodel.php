@@ -106,12 +106,14 @@
     }
     function checkuser($email, $pass) {
         $conn = connectdb();
-        $sql = "SELECT * FROM users WHERE email = '$email' and password = '$pass'";
+        $sql = "SELECT * FROM users WHERE email = :email AND password = :password";
         $stmt = $conn->prepare($sql);
+        // Sử dụng bindParam hoặc bindValue để gán giá trị cho các tham số
+        $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+        $stmt->bindValue(':password', $pass, PDO::PARAM_STR);
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         return $user;
-
     }
     function updateUserbyuser($id,$fullname, $email, $phone){
         $conn = connectdb();
